@@ -15,29 +15,31 @@
         "name": "Julie Dubois",
         "label": "Front-end developer - Junior data scientist",
         "image": "",
-        "presentation" : "Hi, my name is Julie. I play with pixels and code to develop project with all kind of businesses. I'm actualy hired as a consultant in a positive thinking company called Adneom. I'm a passionate about sport, nature and photography. During my spare time I propose my services to help ONG and small business that fight against pollution, destruction of nature and animal extinction. That's my tiny contribution to earth.",
-        "summary": "Dans l'industrie graphique et du multimédia principalement dans le monde du web, j'évolue en tant que infographiste / web designer / front-end developer comme un caméléon. Passionnée par les nouvelles technologies, je recherche sans cesse des manières d'améliorer et de gagner en efficacité dans les projets, que ce soit par un nouvel outil ou par une nouvelle manière de travailler. Mes spécialités sont : Web, Print, Illustration, Multimédia, Photographie, Vidéo, Veille technologique",
+        "summary": "Dans l'industrie graphique et du multimédia principalement dans le monde du web, j'évolue en tant que infographiste / web designer / front-end developer comme un caméléon. Passionnée par les nouvelles technologies, je recherche sans cesse des manières d'améliorer et de gagner en efficacité dans les projets, que ce soit par un nouvel outil ou par une nouvelle manière de travailler.",
         "website": "http://www.iamjiu.eu",
         "email": "julie@iamjiu.eu",
+        "phone": "+32 (0) 497 60 52 53",
         "location": {
           "city": "Ath",
           "countryCode": "BE"
         },
         "profiles": [
             {
-              "username": "iamjiu",
               "url": "https://www.linkedin.com/in/iamjiu/",
               "network": "linkedin"
             },
             {
               "url": "https://github.com/jiu",
-              "username": "jiu",
               "network": "github"
             },
             {
                 "url": "https://www.instagram.com/jiu_iam/",
-                "username": "jiu_iam",
                 "network": "instagram"
+            },
+            {
+                "url": "https://dribbble.com/iamjiu",
+                "network" : "dribbble"
+
             }
         ]
     },
@@ -55,7 +57,7 @@
             "highlights": [
                 "Création et maintenance des pages de l'application web de proximus TV"
             ],
-            "skills": "",
+            "skills": "HTML - SASS - Bootstrap - Javascript - php - Twig",
             "team": 20
         },
         {
@@ -72,7 +74,7 @@
                 "Proximus.be: mise à jour de la librairie (élément HTML/CSS) de composants réutilisables utilisée sur tous les sites Proximus",
                 "Proximus webshop: créez un flux de commande totalement nouveau"
             ],
-            "skills": "",
+            "skills": "HTML - SASS - Foundation 5 - Javascript - Razor - Magnolia CMS",
             "team": 40
         },
         {
@@ -110,7 +112,7 @@
                 "Dans les premiers mois j'ai travaillé (Belgacom) à la création de pages en tant qu'intégrateur, pour la suite être intégrée dans l'équipe qui fut en charge de créer le passage de Belgacom vers Proximus, c'est à dire le re-branding ainsi que la création d'une librairie css personnalisée pour la création des futures pages du site internet."
             ],
             "achievements": "Creation of the new websites of proximus",
-            "skills": "HTML - SASS - Foundation 5 - Javascript - Razor - video edition - php - Wordpress - Teamsite - Magnolia CMS",
+            "skills": "HTML - SASS - Foundation 5 - Javascript - AngularJS - Razor - video edition - php - Wordpress - Teamsite - Magnolia CMS",
             "team": 30
         },
         {
@@ -299,12 +301,7 @@
             "HTML",
             "CSS/SASS/SCSS",
             "Javascript",
-            "React",
-            "Gulp / Grunt",
-            "PHP",
-            "Framework: Foundation Framework, Twitter Bootstrap",
-            "Preprocessors: SASS, LESS, Node, Npm",
-            "Javascript: jQuery, AngularJS, ReactJS"
+            "ReactJS"
           ],
           "level": "",
           "name": "Front-end"
@@ -320,37 +317,28 @@
         },
         {
             "keywords": [
-              "Wordpress",
-              "Drupal",
-              "Magento",
-              "Prestashop"
-            ],
-            "level": "",
-            "name": "CMS"
-        },
-        {
-            "keywords": [
               "Responsive Development (includes on device remote debugging and testing)",
               "Grunt / Gulp Automation",
-              "Package Management: npm, bower, git, SVN"
+              "Package Management: npm, bower",
+              "Preprocessors: SASS, LESS, Node, Npm",
+              "Framework: Foundation Framework, Twitter Bootstrap, bulma",
+              "Versioning: Git, SVN",
+              "CMS : Wordpress, Drupal, Magento, Prestashop"
             ],
             "level": "",
             "name": "WORKFLOW"
         },
         {
             "keywords": [
-                "Certied SEO expert since June 2011",
-                "Google Analytics (basics)",
-                "Google Adsence (basics)"
+                "Certied SEO expert (June 2011)"
             ],
             "level": "",
             "name": "SEO"
         },
         {
             "keywords": [
-                "web and print design",
-                "Suite Adobe (photoshop, illustrator , indesign, after effects, premiere...)",
-                "photo",
+                "Suite Adobe",
+                "Photographie",
                 "video",
                 "illustration"
             ],
@@ -359,7 +347,7 @@
         },
         {
             "keywords": [
-                ""
+                "R"
             ],
             "level": "",
             "name": "Data science / AI"

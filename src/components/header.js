@@ -1,36 +1,46 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-const Header = ({ siteTitle, menuLinks }) => (
-  <header class="navbar">
-    <div class="navbar-brand">
-      <Link to="/" className="navbar-item">
-        {siteTitle}
-      </Link>
-      <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </div>
-    <div id="navbarMenuHeroC" class="navbar-menu">
-      <div class="navbar-end">
-        {menuLinks.map(link => (
-          <Link className="navbar-item" to={link.link}>
-            {link.name}
-          </Link>
-        ))}
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+
+const Header = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            menuLinks {
+              name
+              link
+            }
+          }
+        }
+      }
+    `
+  );
+
+  return (
+    <header className="navbar is-info">
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-item">
+          {data.site.siteMetadata.title}
+        </Link>
+        <span className="navbar-burger burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </div>
-    </div>
-  </header>
-)
+      <nav className="navbar-menu">
+        <div className="navbar-end">
+          {data.site.siteMetadata.menuLinks.map((link) => (
+            <Link className="navbar-item" to={link.link}>
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+};
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;

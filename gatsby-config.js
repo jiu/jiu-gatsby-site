@@ -6,26 +6,39 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ["gatsby-plugin-sass","gatsby-plugin-react-helmet"],
+  plugins: ["gatsby-plugin-sass","gatsby-plugin-react-helmet",`gatsby-transformer-sharp`,
+  `gatsby-plugin-sharp`,
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `${__dirname}/src/images`,
+    },
+  }],
   siteMetadata: {
     title: "i am jiu",
     menuLinks: [
       {
-        name: "home",
+        name: "Accueil",
         link: "/",
       },
       {
-        name: "resume",
-        link: "/resume",
+        name: "Expérience",
+        link: "/experience",
       },
       {
-        name: "skills",
-        link: "/skills",
+        name: "Compétences",
+        link: "/competences",
       },
       {
         name: "contact",
         link: "/contact",
       }
+      // ,
+      // {
+      //   name: "resume",
+      //   link: "/resume",
+      // }
     ],
   },
 }

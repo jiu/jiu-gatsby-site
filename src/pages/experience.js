@@ -1,17 +1,19 @@
 import React from "react"
-import JSONData from "../../content/cv-fr-julie-dubois.json"
+import JSONData from "../data/cv-fr-julie-dubois.json"
 import Layout from "../components/layout"
+import Header from "../components/header"
 
 const resume = () => (
   <Layout>
+    <Header />
     <section class="section">
       <div class="container">
-        <h2 class="subtitle">{JSONData.translation["cv-experiences"]}</h2>
+        <h2 class="title">{JSONData.translation["cv-experiences"]}</h2>
         {JSONData.work.map((data, index) => {
           return (
             <div key={`content_item_${index}`}>
-              <h3>{data.position}</h3>
-              <a href={data.website} target="_blank">
+              <h3 class="subtitle jiu-title">{data.position}</h3>
+              <a href={data.website} target="_blank" rel="noopener noreferrer" className="jiu-links">
                 {data.company} ({data.location})
               </a>
               <p class="is-size-7">
