@@ -1,12 +1,14 @@
 import React from "react";
+import "normalize.css";
+import "../styles/globalStyle.css";
 //import { Helmet } from "react-helmet"
-import "../styles/app.scss";
 
-import Footer from "./footer";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       {/* <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -14,9 +16,10 @@ const Layout = ({ children }) => {
             { name: "keywords", content: "sample, something" },
           ]}
         ></Helmet> */}
+      <Header/>
       {children}
-      <Footer></Footer>
-    </div>
+      <Footer/>
+    </>
   );
 };
 

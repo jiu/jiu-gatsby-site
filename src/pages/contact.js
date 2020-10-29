@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/layout";
-import Header from "../components/header";
+import Layout from "../components/Layout";
 
-const contact = () => <Layout>
-    <Header />
-</Layout>;
+const contact = () => (
+  <Layout>
+  </Layout>
+);
 
 export default contact;

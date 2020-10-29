@@ -32,8 +32,8 @@ const Header = () => {
       </div>
       <nav className="navbar-menu">
         <div className="navbar-end">
-          {data.site.siteMetadata.menuLinks.map((link) => (
-            <Link className="navbar-item" to={link.link}>
+          {data.site.siteMetadata.menuLinks.map((link, index) => (
+            <Link key={index} className="navbar-item" to={link.link}>
               {link.name}
             </Link>
           ))}

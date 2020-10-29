@@ -1,0 +1,668 @@
+{
+    "translation": {
+      "cvExperiences": {
+        "en": "Professional experiences",
+        "fr": "Expériences professionneles"},
+      "cvSkills": 
+      {
+        "en" : "Skills",
+        "fr":  "Compétences"
+      },
+      "cvTraining": {
+        "en" : "Training",
+        "fr" : "Formation"
+        },
+      "cvLanguages": 
+      {
+        "en" : "Languages",
+        "fr" : "Langues"
+        },
+      "cvHobbies": 
+      {
+        "en" : "Hobbies",
+        "fr" : "Hobbies"
+        },
+      "cvExtra": 
+      {
+        "en" : "Plus",
+        "fr" : "Plus"
+        },
+      "cvSecteur": 
+      {
+        "en" : "Activity area",
+        "fr" : "Secteur d'activité"
+        },
+      "cvTeam": 
+      {
+        "en" : "Team",
+        "fr" : "Équipe"
+        },
+      "cvPeople": 
+      {
+        "en" : "peoples",
+        "fr" : "personnes"
+        },
+      "cvSkillsUsed": 
+      {
+        "en" : "Skills used",
+        "fr" : "Compétences utilisées"
+        },
+      "cvAchievements": 
+      {
+        "en" : "Achievements",
+        "fr" : "Réussites"
+        }
+    },
+    "basics": {
+      "name": "Julie Dubois",
+      "fisrtname":"Julie",
+      "lastname": "Dubois",
+      "label": "Front-end developer - Junior data scientist",
+      "image": "",
+      "summary": {
+        "en" : "In the graphic and multimedia industry mainly in the web world, I evolve as a graphic designer / web designer / front-end developer like a chameleon. Passionate about new technologies, I am constantly looking for ways to improve and gain in efficiency in projects, whether through a new tool or a new way of working.",
+        "fr" : "Dans l'industrie graphique et du multimédia principalement dans le monde du web, j'évolue en tant que infographiste / web designer / front-end developer comme un caméléon. Passionnée par les nouvelles technologies, je recherche sans cesse des manières d'améliorer et de gagner en efficacité dans les projets, que ce soit par un nouvel outil ou par une nouvelle manière de travailler."
+        },
+      "pics": "IMG_20160523_131308.jpg"
+      ,
+      "website": "http://www.iamjiu.eu",
+      "email": "julie@iamjiu.eu",
+      "phone": "+32 (0) 497 60 52 53",
+      "location": {
+        "city": "Ath",
+        "countryCode": "BE"
+      },
+      "profiles": [
+        {
+          "url": "https://www.linkedin.com/in/iamjiu/",
+          "network": "linkedin",
+          "icon": ""
+        },
+        {
+          "url": "https://github.com/jiu",
+          "network": "github",
+          "icon": ""
+        },
+        {
+          "url": "https://www.instagram.com/jiu_iam/",
+          "network": "instagram",
+          "icon": ""
+        },
+        {
+          "url": "https://dribbble.com/iamjiu",
+          "network": "dribbble",
+          "icon": ""
+        }
+      ]
+    },
+    "work": [
+      {
+        "summary": {
+          "en" : "Pickx, is the Proximus media platform available on the internet",
+          "fr" : "Pickx, est la plateforme média de Proximus disponible sur internet"
+          },
+        "domain": {
+          "en" : "Telecommunication",
+          "fr" : "Télécommunication"
+          },
+        "website": "https://www.adneom.com/",
+        "company": "Adneom",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Front-end developer @ Proximus PICKX",
+          "fr" : "Front-end developer @ Proximus PICKX"
+          },
+        "startDate": "2020-03",
+        "endDate": "2020-10",
+        "highlights": {
+          "en" : [
+            "Pickx is the media platform of Proximus, my role was for Pickx on the web, it is the content from the TV but also dedicated content like articles on various categories (sport, tv, culture), streaming live of festivals, contests. Each pages is created dynamically based on different feed of data so it was never possible to know in advance what will look the page, for example a simple article with a picture and text and a complex page with images, text, video, a table of score... use the same template. I was in charge to create and update the different template and element for the web application in a way to be reusable in every context."]
+          ,
+          "fr" :[ "Pickx est la plateforme média de Proximus, mon rôle était pour Pickx sur le web, c'est le contenu de la télé mais aussi des contenus dédiés comme des articles sur différentes catégories (sport, tv, culture), streaming en direct de festivals, concours. Chaque page est créée dynamiquement en fonction de différents flux de données, il n'a donc jamais été possible de savoir à l'avance à quoi ressemblera la page, par exemple un simple article avec une image et du texte et une page complexe avec des images, du texte, une vidéo, un tableau de score ... utilise le même modèle. J'étais en charge de créer et de mettre à jour les différents modèles et éléments de l'application Web de manière à être réutilisables dans tous les contextes."]
+          },
+        "achievements": {
+          "en" : "Learn a new workflow with developement server only accessible by SSH and a huge use of git",
+          "fr" : "Apprendre un nouveau flux de travail avec un serveur de développement accessible uniquement par SSH et une utilisation massive de git"
+          },
+        "skills": "HTML - SASS - Bootstrap - Javascript - php - Twig - Git - Scrum",
+        "team": 20
+      },
+      {
+        "summary": {
+          "en" : "Proximus is a telecommunications service provider (Mobile, TV, Internet, fixed line) and also offers the purchase of linked products.",
+          "fr" : "Proximus est un fournisseur de service de télécommunication (Mobile, TV, Internet, ligne fixe) et propose également l'achat de produit lié."
+          },
+        "domain": {
+          "en" : "Telecommunication",
+          "fr" : "Télécommunication"
+          },
+        "website": "https://www.adneom.com/",
+        "company": "Adneom",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Front-end developer @ Proximus",
+          "fr" : "Front-end developer @ Proximus"
+          },
+        "startDate": "2018-01",
+        "endDate": "2020-02",
+        "highlights": {
+          "en" : [
+            "Proximus.be: Proximus is constantly adapting the design of the website, for that there is a custom made library of html/css element. the role was to update the library with the new design so it’s applied everywhere in one shot and also creating new element. i also update structural component like for example the header, the goal was to make the javascript work with each different version (10 versions). a new requirement was also to make the website for people with disabilities, so we also update the library to make it WAI compliant.",
+            "Proximus webshop: based on the requirements of a user experience expert and a designer, the order flow needed to be recreated. It is a dynamic form, which is transformed for each client according to their needs and technical criteria. At the front-end development level, it was necessary to create a structure capable of adapting to each variant and visually easy to understand."]
+          ,
+          "fr" :[ "Proximus.be: Proximus adapte en permanence le design du site, pour cela il existe une bibliothèque sur mesure d'éléments html / css. Le rôle était de mettre à jour la bibliothèque avec le nouveau design afin qu'il soit appliqué partout en une seule fois et également de créer les futurs éléments. J'ai également mis à jour des composants structurels comme par exemple le header du site, le but était de faire fonctionner le javascript avec chaque version différente (10 versions). Une nouvelle exigence était également de rendre le site Web accessible pour les personnes avec des handicaps, donc nous mettons également à jour la bibliothèque pour la rendre conforme aux exigences WAI.","Boutique en ligne Proximus: sur la base des exigences d'un expert en expérience utilisateur et d'un designer, le flux de commande devait être recréé. C'est une forme dynamique, qui se transforme pour chaque client en fonction de ses besoins et critères techniques. Au niveau du développement front-end, il était nécessaire de créer une structure capable de s'adapter à chaque variante et visuellement facile à comprendre."]
+          },
+        "achievements": {
+          "en" : "Working for 2 teams and managing to keep the deadlines",
+          "fr" : "Travailler pour 2 équipes et réussir à respecter les délais"
+          },
+        "skills": "HTML - SASS - Foundation 5 - Javascript - Razor - Magnolia CMS - Git - Scrum",
+        "team": 40
+      },
+      {
+        "summary": {
+          "en" : "Engie is a French energy industrial group.",
+          "fr" : "Engie est un groupe industriel énergétique français."
+          },
+        "domain": {
+          "en" : "Energy",
+          "fr" : "Energie"
+          },
+        "website": "https://www.adneom.com/",
+        "company": "Adneom",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Front-end developer / project manager @ Engie",
+          "fr" : "Front-end developer / project manager @ Engie"
+          },
+        "startDate": "2016-12",
+        "endDate": "2018-01",
+        "highlights": {
+          "en" : [
+            "Participation in the creation of the new website and rebranding of Engie",
+        "Maintenance and updating of the various Engie websites",
+        "Maintenance and creation of templates for e-mailing",
+        "Creation of reusable macros in the Teamsite CMS to help the work of content editors (freemaker 'FTL')",
+        "Technical analysis and testing of solutions developed for new web applications",
+        "Creation of an innovative concept using the Engie box as well as various smart objects (watch, Sonos, Philips Hue) in order to create personalized atmospheres"]
+          ,
+          "fr" :[ "Participation à la créaton du nouveau site web et rebranding d'Engie",
+            "Maintenance et mise à jour des différents sites web d’Engie",
+            "Maintenance et création de templates pour l'e-mailing",
+            "Création de macros réutilisables dans le CMS Teamsite pour aider le travail des éditeurs de contenus",
+            "Analyse technique et testing des solutions développées pour les nouvelles applications web",
+            "Création d'un concept innovant utilisant la box Engie ainsi que divers objects intelligents (montre, Sonos, Philips Hue) afin de réaliser des ambiances personalisées"]
+          },
+        "achievements": {
+          "en" : "Improvement of my front-end skills, basic learning of IoT manipulation",
+          "fr" : "Amélioration de mes compétences front-end, apprentissage de base de la manipulation IoT"
+          },
+        "skills": "HTML - SASS - Javascript - image edition - php - Wordpress - FTL (freemarker) - Teamsite - Smartfocus - API - Android development - GIT - NodeJS - Scrum",
+        "team": 20
+      },
+      {
+        "summary": {
+          "en" : "Proximus is a telecommunications service provider (Mobile, TV, Internet, fixed line) and also offers the purchase of linked products.",
+          "fr" : "Proximus est un fournisseur de service de télécommunication (Mobile, TV, Internet, ligne fixe) et propose également l'achat de produit lié."
+          },
+        "domain": {
+          "en" : "Telecommunication",
+          "fr" : "Télécommunication"
+          },
+        "website": "http://www.harveynash.com/",
+        "company": "Harvey Nash",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Webdesigner - integrateur @ Proximus",
+          "fr" : ""
+          },
+        "startDate": "2013-08",
+        "endDate": "2016-11",
+        "highlights": {
+          "en" : [
+            "Creating pages as an integrator",
+        "Creation and maintenance of javascript applications",
+        "Maintenance « day-to-day » of the website by updating pages and applications in Magnolia and Teamsite",
+        "When moving from Belgacom to Proximus, teamwork on the creation of a personalized css library (based on Zurb foundation)"]
+          ,
+          "fr" :[ "Création de pages en tant qu'intégrateur",
+            "Création et maintenance d'applications javascript",
+            "Maintenance «au jour le jour» du site en mettant à jour les pages et les applications dans Magnolia et Teamsite",
+            "Lors du passage de Belgacom à Proximus, travail en équipe sur la création d'une bibliothèque css personnalisée (basée sur foundation Zurb)"]
+          },
+        "achievements": {
+          "en" : "Improved my long-term vision for the application of HTML / CSS components to create reusable objects",
+          "fr" : "Amélioration de ma vision à long terme de l'application de composants HTML / CSS pour créer des objets réutilisables"
+          },
+        "skills": "HTML - SASS - Foundation 5 - Javascript - AngularJS - Razor - video edition - php - Wordpress - Teamsite - Magnolia CMS - SVN - NodeJS",
+        "team": 30
+      },
+      {
+        "summary": {
+          "en" : "Webdigitales is a website development & online sales company",
+          "fr" : "Webdigitales est une entreprise de développement de site internet & de vente en ligne"
+          },
+        "domain": {
+          "en" : "Information technologies and services",
+          "fr" : "Informatique et services"
+          },
+        "website": "http://www.webdigitales.be/",
+        "company": "Webdigitales",
+        "pinned": true,
+        "location": {
+          "en" : "Ciney",
+          "fr" : "Ciney"
+          },
+        "position": {
+          "en" : "Webmaster / sales technician",
+          "fr" : "Webmaster / Technico-commerciale"
+          },
+        "startDate": "2012-06",
+        "endDate": "2012-12",
+        "highlights": {
+          "en" : [
+            "Creation and maintenance of websites for multiple clients via various cms. (Drupal, prestashop)",
+            "Project management and customer portfolio",
+            "Customization of the Redmine solution, project management software. (Ruby on Rails)"]
+          ,
+          "fr" :[ "Création et maintenance des sites internet des multiples clients via divers cms. (drupal, prestashop)",
+            "Gestion de projets et du porte-feuille clients",
+            "Customisation de la solution Redmine, logiciel de gestion de projet. (Ruby on Rails)"]
+          },
+        "achievements": {
+          "en" : "Learning different CMS and discovering Ruby, improving my customer portfolio management",
+          "fr" : "Apprentissage de différents CMS et découverte de Ruby, amélioration de ma gestion du porte-feuille client"
+          },
+        "skills": "Drupal – Prestashop – Ruby – Rails - php – html – css -javascript",
+        "team": 5
+      },
+      {
+        "summary": {
+          "en" : "ProduWeb is a specialist in SEO websites on Google",
+          "fr" : "ProduWeb est un spécialiste dans le référencement de sites web sur Google"
+          },
+        "domain": {
+          "en" : "Internet",
+          "fr" : "Internet"
+          },
+        "website": "https://www.produweb.be/fr/",
+        "company": "ProduWeb",
+        "pinned": true,
+        "location": {
+          "en" : "Liège",
+          "fr" : "Liège"
+          },
+        "position": {
+          "en" : "SEO specialist",
+          "fr" : "Spécialiste SEO - référenceur"
+          },
+        "startDate": "2011-03",
+        "endDate": "2012-06",
+        "highlights": {
+          "en" : [
+            "Realization of SEO optimization in order to propel websites to the top of search engine rankings",
+        "Implementation of various e-marketing strategies",
+        "Search for the right keywords to put the site in front of its competitors (based on SEMrush, woorank)"]
+          ,
+          "fr" :[ "Réalisation d'optimisation SEO afin de propulser les sites Web en tête des classements des moteurs de recherche",
+            "Mise en œuvre de diverses stratégies e-marketing",
+            "Recherche des bons mots-clés pour mettre le site devant ses concurrents (basé sur SEMrush, woorank)"]
+          },
+        "achievements": {
+          "en" : "Learning natural referencing and analysis tools, obtaining the SEO expert certificate",
+          "fr" : "Apprentissage du référencement naturel et des outils d'analyses, obtention du certificat d'expert SEO"
+          },
+        "skills": "Google Analytics, woorank, SEMrush, SEO, customer management",
+        "team": 3
+      },
+      {
+        "summary": {
+          "en" : "Produweb is a web agency specializing in web marketing & technologies",
+          "fr" : "Produweb est une agence web spécialisée dans le Web marketing & les technologies"
+          },
+        "domain": {
+          "en" : "Internet",
+          "fr" : "Internet"
+          },
+        "website": "https://www.produweb.be/fr/",
+        "company": "ProduWeb",
+        "pinned": true,
+        "location": {
+          "en" : "Liège",
+          "fr" : "Liège"
+          },
+        "position": {
+          "en" : "Webdesigner",
+          "fr" : "Webdesigner"
+          },
+        "startDate": "2010-06",
+        "endDate": "2011-02",
+        "highlights": {
+          "en" : [
+            "Site creation with Wordpress",
+        "Creation of themes for Wordpress",
+        "Creation of layout of internet pages",
+        "Creation of Flash animation"]
+          ,
+          "fr" :[  "Création de site avec Wordpress",
+            "Création de thèmes pour Wordpress",
+            "Création de layout de pages internet",
+            "Création d'animation flash"]
+          },
+        "achievements": {
+          "en" : "Improvement of customer management and work methodology",
+          "fr" : "Amélioration de la gestion client et de la méthodologie de travail"
+          },
+        "skills": "design - Wordpress - Flash – php – html - css - javascript, customer management",
+        "team": 10
+      },
+      {
+        "summary": {
+          "en" : "Cefaly is the company creator of a neurostimulation device to treat migraines",
+          "fr" : "Cefaly est la sociéré créatrise d'un appareil de neurostimulation permettant de traiter les migraines"
+          },
+        "domain": {
+          "en" : "Medical equipments",
+          "fr" : "Équipements médicaux"
+          },
+        "website": "http://www.cefaly-technology.com/",
+        "company": "STX-Med",
+        "pinned": true,
+        "location": {
+          "en" : "Seraing, Liège",
+          "fr" : "Seraing, Liège"
+          },
+        "position": {
+          "en" : "Web and Print Designer",
+          "fr" : "Web and Print Designer"
+          },
+        "startDate": "2009-12",
+        "endDate": "2010-05",
+        "highlights": {
+          "en" : [
+            "Maintenance of existing websites (joomla)",
+        "Creation of the company's e-commerce site (magento)",
+        "Creation of user manuals for the products sold",
+        "Achievements of paper communications (advertisements ...)",
+        "Video editing and retouching",
+        "Creation of flash module for playing videos"]
+          ,
+          "fr" :[ "Maintenance des sites internet existants (joomla)",
+            "Création de du site e-commerce de la société (magento)",
+            "Création des manuels utilisateurs pour les produits vendus",
+            "Réalisations de la communications papiers (publicités...)",
+            "Montage et retouche de vidéo",
+            "Création de module flash pour la lecture de vidéos"]
+          },
+        "achievements": {
+          "en" : "Management of a double job as a print / web graphic designer and developer",
+          "fr" : "Gestion d'un double métier graphiste print/web et développeur"
+          },
+        "skills": "Design - Print - Magento - Joomla - Flash - Video editing - Suite Adobe",
+        "team": 8
+      },
+      {
+        "summary": {
+          "en" : "Tagora is a multi-channel digital agency allowing communication on all media for its clients",
+          "fr" : "Tagora est une agence digitale multi-canal permettant une communication sur tous supports pour ses clients"
+          },
+        "domain": {
+          "en" : "Marketing and Advertising",
+          "fr" : "Marketing et publicité"
+          },
+        "website": "http://www.tagora.be/",
+        "company": "Tagora",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Flash developer",
+          "fr" : "Développeur flash"
+          },
+        "startDate": "2009-10",
+        "endDate": "2009-12",
+        "highlights": {
+          "en" : [
+            "Module/component creation with Flash"]
+          ,
+          "fr" :[ "Création de modules avec Flash"]
+          },
+        "achievements": {
+          "en" : "Discovery of the freelance profession, respect of deadlines",
+          "fr" : "Découverte du métier de freelance, respect des deadlines"
+          },
+        "skills": "Flash - actionscript - Suite Adobe",
+        "team": 1
+      },
+      {
+        "summary": {
+          "en" : "Bureau347 is a digital agency specializing in website creation and advertising",
+          "fr" : "Bureau347 est une agence digitale spécialisée dans la création de site internet et la publicité"
+          },
+        "domain": {
+          "en" : "Internet",
+          "fr" : "Internet"
+          },
+        "website": "http://bureau347.com/",
+        "company": "Bureau347",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Web developer",
+          "fr" : "Développeur web"
+          },
+        "startDate": "2008-12",
+        "endDate": "2009-05",
+        "highlights": {
+          "en" : [
+            "Creation of sites made with flash and actionscript",
+        "Creation of themes / sites with the Wordpress CMS",
+        "Maintenance in various html / css / js / php and Flash sites",
+        "Development of augmented reality with papervision 3D"]
+          ,
+          "fr" :[  "Création de sites avec flash",
+            "Création de thèmes / sites avec le CMS Wordpress",
+            "Maintenance dans divers sites html/css/js/php et Flash"]
+          },
+        "achievements": {
+          "en" : "Learning how to make a 'pixel perfect' web page compared to the original design",
+          "fr" : "Apprentissage de la réalisation de page web 'pixel perfect' par rapport au design original"
+          },
+        "skills": "Wordpress – html - css - javascript - Flash - design - paper vision 3D - augmented reality - Suite Adobe",
+        "team": 6
+      },{
+        "summary": {
+          "en" : "Polygone is a multi-support communication agency",
+          "fr" : "Polygone est une agence de communication multi support"
+          },
+        "domain": {
+          "en" : "Marketing and Advertising",
+          "fr" : "Marketing et publicité"
+          },
+        "website": "http://www.polygonegroup.com/",
+        "company": "Polygone Group",
+        "pinned": true,
+        "location": {
+          "en" : "Brussels",
+          "fr" : "Bruxelles"
+          },
+        "position": {
+          "en" : "Web and Print Designer",
+          "fr" : "Web and Print Designer"
+          },
+        "startDate": "2007-08",
+        "endDate": "2007-09",
+        "highlights": {
+          "en" : [
+            "Creation of various printed documents, Flash animations and web interface design"]
+          ,
+          "fr" :[ "Création de divers documents print, d’animations Flash et de design d’interface Web"]
+          },
+        "achievements": {
+          "en" : "Learning php, putting the Adobe suite into practice",
+          "fr" : "Apprentissage du php, mise en pratique de la suite Adobe"
+          },
+        "skills": "Print - html - css - php - design - Suite Adobe",
+        "team": 10
+      }
+    ],
+    "education": [
+      {
+        "endDate": "2019",
+        "startDate": "2020",
+        "area": "Data Science",
+        "studyType": "Harvard Professional certificate",
+        "institution": "edX",
+        "summary": "Fundamental R programming skills, Statistical concepts such as probability, inference, and modeling and how to apply them in practice, Gain experience with the tidyverse, including data visualization with ggplot2 and data wrangling with dplyr, Become familiar with essential tools for practicing data scientists such as Unix/Linux, git and GitHub, and RStudio, Implement machine learning algorithms, In-depth knowledge of fundamental data science concepts through motivating real-world case studies"
+      },
+      {
+        "endDate": "2013",
+        "startDate": "2013",
+        "area": "Information technology (IT) project management",
+        "studyType": "Certificate",
+        "institution": "Technofutur TIC",
+        "summary": "Project management methodologies, Technical analysis with UML 2.0, Project monitoring methodology with Agile and SCRUM, IT project management, Service and resource management with ITIL"
+      },
+      {
+        "endDate": "2012",
+        "startDate": "2012",
+        "area": "Veejaying",
+        "studyType": "Certificate",
+        "institution": "Technofutur TIC",
+        "summary": "Visual creation with Modul8 software and Resolume Avenue"
+      },
+      {
+        "endDate": "2009",
+        "startDate": "2008",
+        "area": "Actionscript Developer",
+        "studyType": "Certificate",
+        "institution": "Technocité",
+        "summary": "Flash video animation training, dynamic application creation, ActionScript 3: object oriented"
+      },
+      {
+        "endDate": "2007-01",
+        "startDate": "2007-06",
+        "area": "Webdeveloper",
+        "studyType": "Certificate",
+        "institution": "STE-Formations, ULG"
+      },
+      {
+        "endDate": "2006-06",
+        "startDate": "2003-09",
+        "area": "Graphic design (1st & 2nd years)",
+        "studyType": "Bachalaureate",
+        "institution": "Haute Ecole Albert Jacquard"
+      }
+    ],
+    "skills": [
+      {
+        "keywords": [
+          "HTML",
+          "CSS/SASS/SCSS",
+          "Javascript",
+          "ReactJS",
+          "Framework: Foundation, Bootstrap, Bulma, GatsbyJS"
+        ],
+        "level": "",
+        "name": "Front-end"
+      },
+      {
+        "keywords": [
+          "PHP",
+          "MySQL",
+          "Python",
+          "CMS: Wordpress, Drupal, Magento, Prestashop"
+        ],
+        "level": "",
+        "name": "BACK-END"
+      },
+      {
+        "keywords": [
+          "Responsive Development",
+          "Grunt / Gulp Automation",
+          "Package Management: npm, bower",
+          "Preprocessors: SASS, Node",
+          "Versioning: Git, SVN"
+        ],
+        "level": "",
+        "name": "WORKFLOW"
+      },
+      {
+        "keywords": ["Certied SEO expert (June 2011)"],
+        "level": "",
+        "name": "SEO"
+      },
+      {
+        "keywords": ["Suite Adobe", "Photographie", "Video", "Illustration"],
+        "level": "",
+        "name": "Design"
+      },
+      {
+        "keywords": ["R", "Python"],
+        "level": "",
+        "name": "Data science / AI"
+      }
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "fluency": "mother language"
+      },
+      {
+        "name": "English",
+        "fluency": "B1 - intermediate"
+      },
+      {
+        "name": "Dutch",
+        "fluency": "A1 - basis"
+      },
+      {
+        "name": "Spanish",
+        "fluency": "A1 - basis"
+      },
+      {
+        "name": "Portuguese",
+        "fluency": "A1 - basis"
+      }
+    ],
+    "services": [
+      {
+        "name": "Code",
+        "img": ""
+      },
+      {
+        "name": "Visual",
+        "img": ""
+      },
+      {
+        "name": "Photography",
+        "img": ""
+      },
+      {
+        "name": "Data / Ai",
+        "img": ""
+      }
+    ]
+  }
+  

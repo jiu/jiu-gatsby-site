@@ -1,49 +1,116 @@
-import React from "react"
-import JSONData from "../data/cv-fr-julie-dubois.json"
-import Layout from "../components/layout"
-import Header from "../components/header"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 
-const resume = () => (
+
+const Resume = ({data}) => {
+  console.log(data);
+  return(
   <Layout>
-    <Header />
-    <section class="section">
-      <div class="container">
-        <h2 class="title">{JSONData.translation["cv-experiences"]}</h2>
-        {JSONData.work.map((data, index) => {
+      <div className="container">
+        <h2 className="title">{data.dataJson.translation.cvExperiences.en}</h2>
+        {data.dataJson.work.map((work, index) => {
           return (
+           
             <div key={`content_item_${index}`}>
-              <h3 class="subtitle jiu-title">{data.position}</h3>
-              <a href={data.website} target="_blank" rel="noopener noreferrer" className="jiu-links">
-                {data.company} ({data.location})
+              <h3 className="subtitle jiu-title">{work.position.en}</h3>
+              <a
+                href={work.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="jiu-links"
+              >
+                {work.company}
               </a>
-              <p class="is-size-7">
-                {data.startDate} -> {data.endDate}
+              ({work.location.en})
+              <p className="">
+                {work.startDate} - {work.endDate}
               </p>
               <br />
               <ul>
-                {data.highlights.map((item, i) => (
+                {work.highlights.en.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
               <br />
-              <p class="is-size-7">
-                <strong>{JSONData.translation["cv-skills-used"]} :</strong>{" "}
-                {data.skills}
+              <p className="">
+                <strong>{data.dataJson.translation.cvAchievements.en} :</strong>
+                {work.achievements.en}
+              </p> 
+              <p className="">
+                <strong>{data.dataJson.translation.cvSkillsUsed.en} :</strong>
+                {work.skills}
               </p>
-              <p class="is-size-7">
-                <strong>{JSONData.translation["cv-secteur"]} :</strong>{" "}
-                {data.domain}
+              <br />
+              <small>{work.summary.en}</small> 
+              <p className="">
+                <strong>{data.dataJson.translation.cvSecteur.en} :</strong>
+                {work.domain.en}
               </p>
-              <p class="is-size-7">
-                <strong>{JSONData.translation["cv-team"]} :</strong> {data.team}{" "}
-                {JSONData.translation["cv-people"]}
+              <p className="">
+                <strong>{data.dataJson.translation.cvTeam.en} :</strong>
+                {work.team} {data.dataJson.translation.cvPeople.en}
               </p>
               <hr />
             </div>
-          )
+          );
         })}
       </div>
-    </section>
   </Layout>
 )
-export default resume
+};
+
+export const query = graphql`
+  query  {
+    dataJson {
+      translation {
+        cvTeam {
+          en
+        }
+        cvAchievements {
+          en
+        }
+        cvPeople {
+          en
+        }
+        cvSecteur {
+          en
+        }
+        cvSkillsUsed {
+          en
+        }
+        cvExperiences {
+          en
+        }
+      }
+      work {
+        company
+        endDate
+        domain {
+          en
+        }
+        achievements {
+          en
+        }
+        highlights {
+          en
+        }
+        location {
+          en
+        }
+        position {
+          en
+        }
+        skills
+        startDate
+        summary {
+          en
+        }
+        team
+        website
+      }
+    }
+  }
+`;
+
+export default Resume;

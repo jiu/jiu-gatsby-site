@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap);
+
+
+.jiu-wavy {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    color: #a400ff;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.button {
+    border: none;
+    background: none;
+    color: white;
+}
+button::after {
+    content: "";
+    z-index: -1;
+    background: #eb219b;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: skew(-30deg);
+    -webkit-filter: drop-shadow(9px 6px 0 #fcff46);
+}

@@ -6,15 +6,20 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ["gatsby-plugin-sass","gatsby-plugin-react-helmet",`gatsby-transformer-sharp`,
-  `gatsby-plugin-sharp`,
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `images`,
-      path: `${__dirname}/src/images`,
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    `gatsby-transformer-json`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/assets`,
+      },
     },
-  }],
+  ],
   siteMetadata: {
     title: "i am jiu",
     menuLinks: [
@@ -33,12 +38,7 @@ module.exports = {
       {
         name: "contact",
         link: "/contact",
-      }
-      // ,
-      // {
-      //   name: "resume",
-      //   link: "/resume",
-      // }
+      },
     ],
   },
-}
+};
