@@ -600,9 +600,7 @@
       {
         "keywords": [
           "Responsive Development",
-          "Grunt / Gulp Automation",
-          "Package Management: npm, bower",
-          "Preprocessors: SASS, Node",
+          "Package Management & automation: webpack, node/npm, grunt, gulp",
           "Versioning: Git, SVN"
         ],
         "level": "",
@@ -614,7 +612,7 @@
         "name": "SEO"
       },
       {
-        "keywords": ["Suite Adobe", "Photographie", "Video", "Illustration"],
+        "keywords": ["Suite Adobe", "Sketch", "Photographie", "Video", "Illustration"],
         "level": "",
         "name": "Design"
       },
