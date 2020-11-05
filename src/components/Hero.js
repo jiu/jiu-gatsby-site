@@ -99,11 +99,12 @@ const titleAfterEffect = keyframes`
     }
 `;
 
-const HeroContainer = styled.section`
+const Herocontainer = styled.section`
   background-image: url(${(props) => props.bg || "none"});
   background-size: cover;
   background-position: center bottom;
   height: 100vh;
+  width: 100vw;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -119,12 +120,12 @@ const Title80S = styled.div`
 const Subtitle = styled.p`
   position: absolute;
   left: 10%;
-  top: -190%;
+  top: -90%;
   font-family: "Mr Dafoe", cursive;
   font-size: clamp(4rem, 10vw, 30rem);
   margin-bottom: 0;
   color: #eb219b;
-  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  -webkit-text-fill-color: #eb219b;
   text-shadow: -2px -2px 0 #ffbaf2;
   -webkit-filter: drop-shadow(3px 3px 1px #441f62);
   -webkit-transform: skew(-5deg, -5deg);
@@ -227,13 +228,13 @@ const Hero = () => {
   );
 
   return (
-    <HeroContainer bg={data.file.childImageSharp.fluid.src}>
+    <Herocontainer bg={data.file.childImageSharp.fluid.src}>
       <Title80S>
         <Subtitle>{data.dataJson.basics.fisrtname}</Subtitle>
         <Title>{data.dataJson.basics.lastname}</Title>
         <Label>{data.dataJson.basics.label}</Label>
       </Title80S>
-    </HeroContainer>
+    </Herocontainer>
   );
 };
 export default Hero;

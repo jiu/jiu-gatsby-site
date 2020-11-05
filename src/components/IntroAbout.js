@@ -14,32 +14,29 @@ const IntroAbout = () => {
             }
           }
         }
-        file(relativePath: {eq: "images/IMG_20160523_131308.jpg"}) {
+        file(relativePath: { eq: "images/IMG_20160523_131308.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500){
+            fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `
-  )
+  );
   return (
-    <section className="jiu-intro">
+    <section className="section">
       <div className="container">
         <div className="columns">
-          <div className="column is-one-third">
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            alt=""
-          />
+          <div className="column">
+            <Img fluid={data.file.childImageSharp.fluid} alt="" />
           </div>
           <div className="column">
             <h2 className="title">Hello</h2>
             <p className="jiu-m2">{data.dataJson.basics.summary.en}</p>
             <Link to="/experience" className="button">
-              En savoir plus mon expérience
-            </Link> 
+              More
+            </Link>
           </div>
           <hr />
         </div>

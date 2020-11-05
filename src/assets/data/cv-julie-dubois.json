@@ -75,23 +75,23 @@
       "profiles": [
         {
           "url": "https://www.linkedin.com/in/iamjiu/",
-          "network": "linkedin",
-          "icon": ""
+          "network": "Linkedin",
+          "icon": "ImLinkedin"
         },
         {
           "url": "https://github.com/jiu",
-          "network": "github",
-          "icon": ""
+          "network": "Github",
+          "icon": "ImGithub"
         },
         {
           "url": "https://www.instagram.com/jiu_iam/",
-          "network": "instagram",
-          "icon": ""
+          "network": "Instagram",
+          "icon": "ImInstagram"
         },
         {
           "url": "https://dribbble.com/iamjiu",
-          "network": "dribbble",
-          "icon": ""
+          "network": "Dribbble",
+          "icon": "ImDribbble"
         }
       ]
     },

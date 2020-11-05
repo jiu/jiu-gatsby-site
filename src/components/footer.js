@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { ImInstagram, ImDribbble, ImLinkedin, ImGithub } from "react-icons/im";
 
 const Footer = () => {
   const data = useStaticQuery(
@@ -22,6 +23,12 @@ const Footer = () => {
       }
     `
   );
+  const NetworkIconComp = {
+    Linkedin: ImLinkedin,
+    Instagram: ImInstagram,
+    Github: ImGithub,
+    Dribbble: ImDribbble,
+  };
   return (
     <footer className="footer">
       <div className="container">
@@ -32,10 +39,11 @@ const Footer = () => {
           <div className="column is-half has-text-right">
             <ul>
               {data.dataJson.basics.profiles.map((data, index) => {
+                const NetworkIcon = NetworkIconComp[data.network];
                 return (
                   <li key={index}>
-                    <a href={data.url} >
-                      {data.network}
+                    <a href={data.url} title={data.network}>
+                      <NetworkIcon />
                     </a>
                   </li>
                 );
