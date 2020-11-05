@@ -647,19 +647,19 @@
     "services": [
       {
         "name": "Code",
-        "img": ""
+        "img": "Code"
       },
       {
         "name": "Visual",
-        "img": ""
+        "img": "Visual"
       },
       {
         "name": "Photography",
-        "img": ""
+        "img": "Photography"
       },
       {
         "name": "Data / Ai",
-        "img": ""
+        "img": "Data"
       }
     ]
   }
