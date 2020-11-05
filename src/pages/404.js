@@ -18,6 +18,7 @@ const NotFoundPage = () => (
           frameBorder="0"
           class="giphy-embed"
           allowFullScreen
+          title="lost 404 page"
         ></iframe>
         <p>
           <a href="https://giphy.com/gifs/cat-squirrel-RU4KgvUGsj3eE">
