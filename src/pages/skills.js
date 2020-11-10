@@ -2,23 +2,26 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import styled from "styled-components";
+
+const TrainingContainer = styled.div`
+  margin-bottom: 2rem;
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+`;
 
 const Skills = ({ data }) => {
-  console.log(data);
   return (
-    <Layout>
-      <SEO
-        title={data.dataJson.translation.cvSkills.en}
-        htmlclass="has-navbar-fixed-top"
-      />
+    <Layout title={data.dataJson.translation.cvSkills.en}>
+      <SEO title={data.dataJson.translation.cvSkills.en} htmlclass="" />
       <section className="section">
         <div className="container">
-          <h2 className="title">{data.dataJson.translation.cvSkills.en}</h2>
-          <div className="columns is-multiline">
+          <div className="columns is-multiline is-variable is-8-desktop">
             {data.dataJson.skills.map((data, index) => {
               return (
-                <div
-                  className="column is-half-tablet"
+                <TrainingContainer
+                  className="column is-half-tablet is-one-third-desktop"
                   key={`content_item_${index}`}
                 >
                   <h3 className="subtitle jiu-title">{data.name}</h3>
@@ -27,7 +30,7 @@ const Skills = ({ data }) => {
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
-                </div>
+                </TrainingContainer>
               );
             })}
           </div>
@@ -35,7 +38,7 @@ const Skills = ({ data }) => {
           <h2 className="title">{data.dataJson.translation.cvTraining.en}</h2>
           {data.dataJson.education.map((data, index) => {
             return (
-              <div key={`content_item_${index}`}>
+              <TrainingContainer key={`content_item_${index}`}>
                 <h3 className="subtitle jiu-title">
                   {data.area} ({data.institution})
                 </h3>
@@ -44,8 +47,7 @@ const Skills = ({ data }) => {
                 </p>
                 <p>{data.summary}</p>
                 <p className="is-size-7">{data.studyType}</p>
-                <br />
-              </div>
+              </TrainingContainer>
             );
           })}
         </div>

@@ -1,6 +1,20 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import { ImInstagram, ImDribbble, ImLinkedin, ImGithub } from "react-icons/im";
+
+import styled from "styled-components";
+import SocialIcons from "./SocialIcons";
+
+const FooterContainer = styled.footer`
+  margin-top: auto;
+  bottom: 0;
+  padding: 1.5rem;
+  position: relative a {
+    color: grey;
+  }
+  .siteTitle {
+    font-weight: bold;
+  }
+`;
 
 const Footer = () => {
   const data = useStaticQuery(
@@ -11,49 +25,26 @@ const Footer = () => {
             title
           }
         }
-        dataJson {
-          basics {
-            profiles {
-              network
-              url
-              icon
-            }
-          }
-        }
       }
     `
   );
-  const NetworkIconComp = {
-    Linkedin: ImLinkedin,
-    Instagram: ImInstagram,
-    Github: ImGithub,
-    Dribbble: ImDribbble,
-  };
+
   return (
-    <footer className="footer">
+    <FooterContainer className="footer">
       <div className="container">
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column is-half">
-            <Link to="/">{data.site.siteMetadata.title}</Link>
+            <Link to="/" className="siteTitle">
+              {data.site.siteMetadata.title}
+            </Link>
           </div>
           <div className="column is-half has-text-right">
-            <ul>
-              {data.dataJson.basics.profiles.map((data, index) => {
-                const NetworkIcon = NetworkIconComp[data.network];
-                return (
-                  <li key={index}>
-                    <a href={data.url} title={data.network}>
-                      <NetworkIcon />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <SocialIcons />
           </div>
         </div>
         {/* privacy site name download cv */}
       </div>
-    </footer>
+    </FooterContainer>
   );
 };
 

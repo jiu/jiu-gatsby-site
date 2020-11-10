@@ -87,11 +87,6 @@
           "url": "https://www.instagram.com/jiu_iam/",
           "network": "Instagram",
           "icon": "ImInstagram"
-        },
-        {
-          "url": "https://dribbble.com/iamjiu",
-          "network": "Dribbble",
-          "icon": "ImDribbble"
         }
       ]
     },
@@ -582,7 +577,10 @@
           "CSS/SASS/SCSS",
           "Javascript",
           "ReactJS",
-          "Framework: Foundation, Bootstrap, Bulma, GatsbyJS"
+          "Framework: Foundation, Bootstrap, Bulma, GatsbyJS",
+          "GraphQL",
+          "Styled component"
+
         ],
         "level": "",
         "name": "Front-end"
@@ -620,6 +618,12 @@
         "keywords": ["R", "Python"],
         "level": "",
         "name": "Data science / AI"
+      }
+      ,
+      {
+        "keywords": ["Angular", "VueJS", "Testing (Jest / Enzyme)", "Typescript", "ExpressJS", "Data science"],
+        "level": "",
+        "name": "Now learning..."
       }
     ],
     "languages": [

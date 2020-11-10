@@ -33,19 +33,19 @@ module.exports = {
     title: "i am jiu",
     menuLinks: [
       {
-        name: "Accueil",
+        name: "Home",
         link: "/",
       },
       {
-        name: "Expérience",
-        link: "/experience",
+        name: "Experiences",
+        link: "/experiences",
       },
       {
-        name: "Compétences",
-        link: "/competences",
+        name: "Skills",
+        link: "/skills",
       },
       {
-        name: "contact",
+        name: "Contact",
         link: "/contact",
       },
     ],

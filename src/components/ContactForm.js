@@ -1,94 +1,117 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 
-const ContactForm = () => {
-  const config = {
-    cors: "https://cors-anywhere.herokuapp.com/", // <optional> doesn't display the cors error
-    formUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLScFxrYw7dzvbFN7cXtUC4oE6Lw4r1oRc6XW4Zlye8UFDwYFEg/formResponse",
-  };
+const API_PATH = "http://hello.iamjiu.eu/api/contact/index.php";
 
-  const Input = ({ name, label, doChange, type = "text" }) => {
-    return (
-      <label htmlFor={name} className="form-label">
-        {label}
-        <input type={type} id={name} name={name} onChange={doChange} />
-      </label>
-    );
-  };
-  /**
-    I think this way to organize the 'inputs' is more clearest.
-    The 'id' property is the input field in your google form,
-    for example the 'name' field, if you inpect you Google form this should looks like 'entry.2005620554'
-    */
-  state = {
-    inputs: {
-      name: { id: 2005620554, value: "" },
-      email: { id: 1045781291, value: "" },
-      phone: { id: 1166974658, value: null },
-      message: { id: 839337160, value: "" },
-    },
-  };
-
-  doSubmit = async (e) => {
+class ContactForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fname: "",
+      lname: "",
+      email: "",
+      message: "",
+      mailSent: false,
+      error: null,
+    };
+  }
+  handleFormSubmit = (e) => {
     e.preventDefault();
-
-    const { inputs } = this.state;
-    const formData = new FormData();
-
-    _.map(inputs, (item) => {
-      formData.append(`entry.${item.id}`, item.value);
-    });
-
-    await axios({
-      url: `${config.cors}${config.formUrl}`,
+    axios({
       method: "post",
-      data: formData,
-      responseType: "json",
+      url: `${API_PATH}`,
+      headers: { "content-type": "application/json" },
+      data: this.state,
     })
-      .then(() => {
-        console.log("response", response);
+      .then((result) => {
+        this.setState({
+          mailSent: result.data.sent,
+        });
       })
-      .catch((err) => {
-        console.log("err", err);
-      });
+      .catch((error) => this.setState({ error: error.message }));
   };
-
-  handleChange = (e) => {
-    const { value, name } = e.target;
-    const { inputs } = this.state;
-
-    inputs[name].value = value;
-
-    this.setState({
-      inputs,
-    });
-  };
-
-  return (
-    <form name="contact-form" onSubmit={this.doSubmit}>
-      <fieldset>
-        <legend>Contact Form</legend>
-
-        <Input name="name" label="Name" doChange={this.handleChange} />
-        <Input
-          name="email"
-          label="Email"
-          doChange={this.handleChange}
-          type="email"
-        />
-        <Input name="phone" label="Phone number" doChange={this.handleChange} />
-
-        <label htmlFor="message" className="form-label">
-          Message
-          <textarea id="message" name="message" onChange={this.handleChange} />
-        </label>
-
-        <p>
-          <button className="btn">Send message</button>
-        </p>
-      </fieldset>
-    </form>
-  );
-};
+  render() {
+    return (
+      <>
+        <div>
+          {this.state.mailSent && <div>Thank you for contacting us.</div>}
+        </div>
+        <form action="#">
+          <div className="field">
+            <label className="label" htmlFor="fname">
+              First Name
+            </label>
+            <div className="control">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                className="input"
+                placeholder="Your name.."
+                value={this.state.fname}
+                onChange={(e) => this.setState({ fname: e.target.value })}
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label" htmlFor="lname">
+              Last Name
+            </label>
+            <div className="control">
+              <input
+                type=" text"
+                id="lname"
+                name="lastname"
+                className="input"
+                placeholder="Your last name.."
+                value={this.state.lname}
+                onChange={(e) => this.setState({ lname: e.target.value })}
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label" htmlFor="email">
+              Email
+            </label>
+            <div className="control">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="input"
+                placeholder="Your email"
+                value={this.state.email}
+                onChange={(e) => this.setState({ email: e.target.value })}
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label" htmlFor="message">
+              Message
+            </label>
+            <div className="control">
+              <textarea
+                id="message"
+                name="message"
+                className="textarea"
+                placeholder="Write something.."
+                onChange={(e) => this.setState({ message: e.target.value })}
+                value={this.state.message}
+              ></textarea>
+            </div>
+          </div>
+          <div class="control">
+            <input
+              type="submit"
+              onClick={(e) => this.handleFormSubmit(e)}
+              value="Submit"
+              className="button is-primary"
+            />
+          </div>
+        </form>
+      </>
+    );
+  }
+}
 
 export default ContactForm;
