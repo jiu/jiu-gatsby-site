@@ -14,7 +14,7 @@ const SocialLink = styled.ul`
     }
     a {
       font-size: 40px;
-      color: black;
+      color: #363636;
     }
   }
 `;

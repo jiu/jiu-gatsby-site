@@ -11,12 +11,11 @@ export default function Contact() {
       <section className="section">
         <div className="container">
           <div className="columns">
-            <div className="column">
+            <div className="column is-three-fifths is-offset-one-fifth">
               <h2 className="title jiu-title">Get in touch...</h2>
               <SocialIcons size="large" />
-            </div>
-            <div className="column">
-              <h2 className="title">or send a message</h2>
+              <div className="jiu-wavy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <h2 className="title jiu-title">or send a message !</h2>
               <ContactForm />
             </div>
           </div>

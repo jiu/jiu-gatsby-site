@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 
 const TitleContainer = styled.section`
   padding: 7rem 3rem 6rem;
-  background: #a400ff; /* fallback for old browsers */
+  background: #a400ff;
   position: relative;
   h2 {
     color: white;

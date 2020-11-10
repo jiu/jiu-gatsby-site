@@ -8,7 +8,6 @@ import styled from "styled-components";
 
 const IconContainer = styled.div`
   max-width: 250px;
-  //max-height: 150px;
   margin: auto;
   padding: 1rem;
 `;

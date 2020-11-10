@@ -1,117 +1,152 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { Formik, Form, useField } from "formik";
+import * as Yup from "yup";
 import axios from "axios";
 
-const API_PATH = "http://hello.iamjiu.eu/api/contact/index.php";
+const API_PATH = "http://www.iamjiu.eu/api/contact/index.php";
 
-class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fname: "",
-      lname: "",
-      email: "",
-      message: "",
-      mailSent: false,
-      error: null,
-    };
-  }
-  handleFormSubmit = (e) => {
-    e.preventDefault();
-    axios({
-      method: "post",
-      url: `${API_PATH}`,
-      headers: { "content-type": "application/json" },
-      data: this.state,
-    })
-      .then((result) => {
-        this.setState({
-          mailSent: result.data.sent,
-        });
-      })
-      .catch((error) => this.setState({ error: error.message }));
-  };
-  render() {
-    return (
-      <>
-        <div>
-          {this.state.mailSent && <div>Thank you for contacting us.</div>}
+const MyTextInput = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <div className="field">
+        <label className="label" htmlFor={props.id || props.name}>
+          {label}
+        </label>
+        <div className="control">
+          <input
+            className={`text-input input ${
+              meta.touched && meta.error ? "is-danger" : ""
+            }`}
+            {...field}
+            {...props}
+          />
         </div>
-        <form action="#">
-          <div className="field">
-            <label className="label" htmlFor="fname">
-              First Name
-            </label>
-            <div className="control">
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                className="input"
-                placeholder="Your name.."
-                value={this.state.fname}
-                onChange={(e) => this.setState({ fname: e.target.value })}
-              />
+        {meta.touched && meta.error ? (
+          <div className="error is-danger">{meta.error}</div>
+        ) : null}
+      </div>
+    </>
+  );
+};
+const MyTextArea = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <div className="field">
+        <label className="label" htmlFor={props.id || props.name}>
+          {label}
+        </label>
+        <div className="control">
+          <textarea
+            className={`textarea ${
+              meta.touched && meta.error ? "is-danger" : ""
+            }`}
+            {...field}
+            {...props}
+          />
+        </div>
+        {meta.touched && meta.error ? (
+          <div className="error is-danger">{meta.error}</div>
+        ) : null}
+      </div>
+    </>
+  );
+};
+
+const ContactForm = () => {
+  const [serverState, setServerState] = useState();
+  const handleServerResponse = (ok, msg) => {
+    setServerState({ ok, msg });
+  };
+  return (
+    <>
+      <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        }}
+        validationSchema={Yup.object({
+          firstName: Yup.string()
+            .max(15, "Must be 15 characters or less")
+            .required("Required"),
+          lastName: Yup.string()
+            .max(20, "Must be 20 characters or less")
+            .required("Required"),
+          email: Yup.string()
+            .email("Invalid email addresss`")
+            .required("Required"),
+          message: Yup.string()
+            .min(20, "Must be 20 characters or more")
+            .required("Required"),
+        })}
+        onSubmit={(values, actions) => {
+          axios({
+            method: "POST",
+            url: `${API_PATH}`,
+            headers: { "content-type": "application/json" },
+            data: values,
+          })
+            .then((response) => {
+              actions.setSubmitting(false);
+              actions.resetForm();
+              handleServerResponse(
+                true,
+                "Thanks for the message! Keep in touch very soon. :)"
+              );
+            })
+            .catch((error) => {
+              actions.setSubmitting(false);
+              handleServerResponse(false, error.response.data.error);
+            });
+        }}
+      >
+        <Form>
+          <MyTextInput
+            label="First Name"
+            name="firstName"
+            type="text"
+            placeholder="Jane"
+          />
+          <MyTextInput
+            label="Last Name"
+            name="lastName"
+            type="text"
+            placeholder="Doe"
+          />
+          <MyTextInput
+            label="Email Address"
+            name="email"
+            type="email"
+            placeholder="jane@google.com"
+          />
+          <MyTextArea
+            label="message"
+            name="message"
+            placeholder="Write something.."
+          />
+          <button type="submit" className="button">
+            Submit
+          </button>
+          {serverState && (
+            <div
+              className={`"notification" ${
+                !serverState.ok ? "is-danger" : "is-success"
+              }`}
+            >
+              {serverState.msg}
             </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor="lname">
-              Last Name
-            </label>
-            <div className="control">
-              <input
-                type=" text"
-                id="lname"
-                name="lastname"
-                className="input"
-                placeholder="Your last name.."
-                value={this.state.lname}
-                onChange={(e) => this.setState({ lname: e.target.value })}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor="email">
-              Email
-            </label>
-            <div className="control">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="input"
-                placeholder="Your email"
-                value={this.state.email}
-                onChange={(e) => this.setState({ email: e.target.value })}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor="message">
-              Message
-            </label>
-            <div className="control">
-              <textarea
-                id="message"
-                name="message"
-                className="textarea"
-                placeholder="Write something.."
-                onChange={(e) => this.setState({ message: e.target.value })}
-                value={this.state.message}
-              ></textarea>
-            </div>
-          </div>
-          <div class="control">
-            <input
-              type="submit"
-              onClick={(e) => this.handleFormSubmit(e)}
-              value="Submit"
-              className="button is-primary"
-            />
-          </div>
-        </form>
-      </>
-    );
-  }
-}
+          )}
+        </Form>
+      </Formik>
+    </>
+  );
+};
 
 export default ContactForm;

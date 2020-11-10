@@ -42,7 +42,6 @@ const Footer = () => {
             <SocialIcons />
           </div>
         </div>
-        {/* privacy site name download cv */}
       </div>
     </FooterContainer>
   );
