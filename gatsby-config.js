@@ -43,6 +43,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: "i am jiu",
+    apiURL: process.env.C_API_URL,
     menuLinks: [
       {
         name: "Home",

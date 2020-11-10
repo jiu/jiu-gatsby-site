@@ -43,7 +43,7 @@ const Skills = ({ data }) => {
                   {data.area} ({data.institution})
                 </h3>
                 <p className="is-size-7">
-                  {data.startDate} -> {data.endDate}
+                  {data.startDate} - {data.endDate}
                 </p>
                 <p>{data.summary}</p>
                 <p className="is-size-7">{data.studyType}</p>

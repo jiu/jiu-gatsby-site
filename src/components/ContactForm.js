@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-
-const API_PATH = "http://www.iamjiu.eu/api/contact/index.php";
+import { useStaticQuery, graphql } from "gatsby";
 
 const MyTextInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -59,6 +58,16 @@ const MyTextArea = ({ label, ...props }) => {
 };
 
 const ContactForm = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          apiURL
+        }
+      }
+    }
+  `);
+
   const [serverState, setServerState] = useState();
   const handleServerResponse = (ok, msg) => {
     setServerState({ ok, msg });
@@ -89,7 +98,7 @@ const ContactForm = () => {
         onSubmit={(values, actions) => {
           axios({
             method: "POST",
-            url: `${API_PATH}`,
+            url: `${data.site.siteMetadata.apiURL}`,
             headers: { "content-type": "application/json" },
             data: values,
           })
