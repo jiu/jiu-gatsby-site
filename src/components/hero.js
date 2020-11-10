@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled, { keyframes } from "styled-components";
-//import bg from "../assets/images/taton-moise-l2rVs8c7KFs-unsplash.jpg";
+import { GiTronArrow } from "react-icons/gi";
 
 const titleBeforeEffect = keyframes`
   0% {
@@ -99,6 +99,18 @@ const titleAfterEffect = keyframes`
     }
 `;
 
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(70deg);
+  }
+  40% {
+    transform: translateY(-30px) rotate(70deg);
+  }
+  60% {
+    transform: translateY(-15px) rotate(70deg);
+  }
+`;
+
 const Herocontainer = styled.section`
   background-image: url(${(props) => props.bg || "none"});
   background-size: cover;
@@ -109,6 +121,15 @@ const Herocontainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 2rem;
+  svg {
+    position: absolute;
+    bottom: 2rem;
+    color: white;
+    -moz-animation: ${bounce} 2s infinite;
+    -webkit-animation: ${bounce} 2s infinite;
+    animation: ${bounce} 2s infinite;
+  }
 `;
 
 const Title80S = styled.div`
@@ -234,6 +255,7 @@ const Hero = () => {
         <Title>{data.dataJson.basics.lastname}</Title>
         <Label>{data.dataJson.basics.label}</Label>
       </Title80S>
+      <GiTronArrow></GiTronArrow>
     </Herocontainer>
   );
 };

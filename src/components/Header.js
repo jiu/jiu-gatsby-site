@@ -3,7 +3,11 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
 const HeaderMain = styled.header`
-  background-color: #eb219b45 !important;
+  background-color: #eb219b65 !important;
+
+  .navbar-end [aria-current]:not([aria-current="false"]) {
+    background-color: #de148e;
+  }
 `;
 
 const Header = () => {
