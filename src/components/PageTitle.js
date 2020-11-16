@@ -36,7 +36,7 @@ const TitleContainer = styled.section`
 const PageTitle = ({ title }) => {
   if (title !== "Home") {
     return (
-      <TitleContainer className="section">
+      <TitleContainer className="section jumbo">
         <div className="skewed"></div>
         <div className="container">
           <h2 className="title">{title}</h2>

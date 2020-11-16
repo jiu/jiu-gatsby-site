@@ -122,6 +122,7 @@ const Herocontainer = styled.section`
   flex-direction: column;
   justify-content: center;
   font-size: 2rem;
+  overflow: hidden;
   svg {
     position: absolute;
     bottom: 2rem;
@@ -249,7 +250,7 @@ const Hero = () => {
   );
 
   return (
-    <Herocontainer bg={data.file.childImageSharp.fluid.src}>
+    <Herocontainer bg={data.file.childImageSharp.fluid.src} className="jumbo">
       <Title80S>
         <Subtitle>{data.dataJson.basics.fisrtname}</Subtitle>
         <Title>{data.dataJson.basics.lastname}</Title>

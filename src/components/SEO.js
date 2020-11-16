@@ -17,8 +17,8 @@ const SEO = ({ children, location, description, title, image, htmlclass }) => {
       <html lang="en" className={htmlclass} />
       <title>{title}</title>
       {/* Fav Icons */}
-      <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-      <link rel="alternate icon" href="../favicon.ico" />
+      {/* <link rel="icon" type="image/svg+xml" href="../favicon.svg" /> */}
+      <link rel="alternate icon" href="./favicon.ico" />
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />

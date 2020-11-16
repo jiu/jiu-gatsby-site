@@ -11,6 +11,21 @@ const HeaderMain = styled.header`
   &.amir {
     background-color: #eb219b !important;
   }
+  nav.is-active {
+    background-color: #a400ff;
+    a {
+      color: white;
+    }
+    a:hover,
+    a:focus {
+      background-color: #de148e;
+    }
+  }
+  .hamburger {
+    right: 10px;
+    align-self: center;
+    position: fixed;
+  }
 `;
 
 const Header = () => {
@@ -30,14 +45,21 @@ const Header = () => {
     `
   );
   let listener = null;
+  const elHeight = () => {
+    if (document.getElementsByClassName("jumbo")) {
+      return document.getElementsByClassName("jumbo")[0].offsetHeight;
+    }
+    return 250;
+  };
 
+  console.log(elHeight());
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollState, setScrollState] = useState("top");
 
   useEffect(() => {
     listener = document.addEventListener("scroll", (e) => {
       var scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= window.innerHeight - 100) {
+      if (scrolled >= elHeight()) {
         if (scrollState !== "amir") {
           setScrollState("amir");
         }
@@ -58,14 +80,22 @@ const Header = () => {
         <Link to="/" className="navbar-item">
           {data.site.siteMetadata.title}
         </Link>
+        {/* <span className="navbar-burger burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span> */}
         <span
-          className="navbar-burger burger"
+          className={`is-hidden-desktop hamburger hamburger--emphatic ${
+            openMenu ? "is-active" : ""
+          }`}
+          type="button"
           onClick={() => setOpenMenu(!openMenu)}
           aria-hidden="true"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
         </span>
       </div>
       <nav
