@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Hero from "../components/Hero";
 
 const TitleContainer = styled.section`
   padding: 7rem 3rem 6rem;
@@ -34,18 +33,14 @@ const TitleContainer = styled.section`
 `;
 
 const PageTitle = ({ title }) => {
-  if (title !== "Home") {
-    return (
-      <TitleContainer className="section jumbo">
-        <div className="skewed"></div>
-        <div className="container">
-          <h2 className="title">{title}</h2>
-        </div>
-      </TitleContainer>
-    );
-  } else {
-    return <Hero />;
-  }
+  return (
+    <TitleContainer className="section">
+      <div className="skewed"></div>
+      <div className="container">
+        <h2 className="title">{title}</h2>
+      </div>
+    </TitleContainer>
+  );
 };
 
 export default PageTitle;

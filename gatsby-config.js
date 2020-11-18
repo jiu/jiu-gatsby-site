@@ -29,6 +29,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-background-image",
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: "/:",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA_TRACKING_ID,
@@ -43,6 +50,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: "i am jiu",
+    description: "Front end developer passionate about visual and data",
     apiURL: process.env.C_API_URL,
     menuLinks: [
       {

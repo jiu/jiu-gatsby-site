@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled, { keyframes } from "styled-components";
 import { GiTronArrow } from "react-icons/gi";
+import BackgroundImage from "gatsby-background-image";
 
 const titleBeforeEffect = keyframes`
   0% {
@@ -112,24 +113,27 @@ const bounce = keyframes`
 `;
 
 const Herocontainer = styled.section`
-  background-image: url(${(props) => props.bg || "none"});
-  background-size: cover;
-  background-position: center bottom;
   height: 100vh;
   width: 100vw;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 2rem;
   overflow: hidden;
   svg {
     position: absolute;
     bottom: 2rem;
     color: white;
     -moz-animation: ${bounce} 2s infinite;
-    -webkit-animation: ${bounce} 2s infinite;
     animation: ${bounce} 2s infinite;
+    animation: ${bounce} 2s infinite;
+  }
+  .bgimg {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
   }
 `;
 
@@ -149,8 +153,8 @@ const Subtitle = styled.p`
   color: #eb219b;
   -webkit-text-fill-color: #eb219b;
   text-shadow: -2px -2px 0 #ffbaf2;
-  -webkit-filter: drop-shadow(3px 3px 1px #441f62);
-  -webkit-transform: skew(-5deg, -5deg);
+  filter: drop-shadow(3px 3px 1px #441f62);
+  transform: skew(-5deg, -5deg);
   font-weight: normal;
   z-index: 2;
 `;
@@ -163,7 +167,7 @@ const Title = styled.p`
   font-weight: 400;
   line-height: 1;
   margin: 0;
-  background-image: -webkit-linear-gradient(
+  background-image: linear-gradient(
     #022486 0%,
     #0ad0fd 30%,
     #bdfcfc 40%,
@@ -179,6 +183,7 @@ const Title = styled.p`
     #affdff 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
 
@@ -189,13 +194,13 @@ const Title = styled.p`
     top: 74px;
     width: 80px;
     height: 3px;
-    background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+    background-image: radial-gradient(#fff 0%, transparent 85%);
     z-index: 4;
-    -webkit-animation-name: ${titleBeforeEffect};
-    -webkit-animation-duration: 5s;
-    -webkit-animation-delay: 2s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    animation-name: ${titleBeforeEffect};
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   &:after {
@@ -205,13 +210,13 @@ const Title = styled.p`
     top: 32px;
     width: 3px;
     height: 80px;
-    background-image: -webkit-radial-gradient(#fff 0%, transparent 85%);
+    background-image: radial-gradient(#fff 0%, transparent 85%);
     z-index: 4;
     animation-name: ${titleAfterEffect};
-    -webkit-animation-duration: 5s;
-    -webkit-animation-delay: 2s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 `;
 
@@ -250,13 +255,19 @@ const Hero = () => {
   );
 
   return (
-    <Herocontainer bg={data.file.childImageSharp.fluid.src} className="jumbo">
-      <Title80S>
-        <Subtitle>{data.dataJson.basics.fisrtname}</Subtitle>
-        <Title>{data.dataJson.basics.lastname}</Title>
-        <Label>{data.dataJson.basics.label}</Label>
-      </Title80S>
-      <GiTronArrow></GiTronArrow>
+    <Herocontainer>
+      <BackgroundImage
+        Tag={`section`}
+        fluid={data.file.childImageSharp.fluid}
+        className="bgimg"
+      >
+        <Title80S>
+          <Subtitle>{data.dataJson.basics.fisrtname}</Subtitle>
+          <Title>{data.dataJson.basics.lastname}</Title>
+          <Label>{data.dataJson.basics.label}</Label>
+        </Title80S>
+        <GiTronArrow></GiTronArrow>
+      </BackgroundImage>
     </Herocontainer>
   );
 };
