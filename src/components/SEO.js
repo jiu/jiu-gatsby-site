@@ -37,6 +37,7 @@ const SEO = ({ children, location, description, title, image, htmlclass }) => {
         key="ogsitename"
       />
       <meta property="og:description" content={description} key="ogdesc" />
+      <meta name="theme-color" content="#eb219b"></meta>
       {children}
     </Helmet>
   );
