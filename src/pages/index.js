@@ -7,7 +7,10 @@ import SEO from "../components/SEO";
 const IndexPage = () => {
   return (
     <Layout title="Home">
-      <SEO title="Hello" />
+      <SEO
+        title="Digital multi profile"
+        description="A front-end developer learning data science and passionated about design."
+      />
 
       <IntroAbout />
       <div className="jiu-wavy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>

@@ -245,8 +245,8 @@ const Hero = () => {
           relativePath: { eq: "images/taton-moise-l2rVs8c7KFs-unsplash.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1900) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 90, maxWidth: 1900) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

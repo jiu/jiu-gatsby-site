@@ -27,8 +27,8 @@ const IntroAbout = () => {
         }
         file(relativePath: { eq: "images/IMG_20160523_131308.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 90, maxWidth: 500) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
