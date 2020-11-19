@@ -26,7 +26,10 @@ const SEO = ({ children, location, description, title, image, htmlclass }) => {
       <meta name="description" content={data.site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || "iamjiu-og.png"} />
+      <meta
+        property="og:image"
+        content={image || "//www.iamjiu.eu/iamjiu-og.png"}
+      />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         propery="og:site_name"
