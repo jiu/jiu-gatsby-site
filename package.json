@@ -14,6 +14,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^1.6.12",
+    "@react-pdf/styled-components": "^1.4.0",
     "axios": "^0.21.0",
     "bulma": "^0.9.1",
     "formik": "^2.2.5",
@@ -26,6 +28,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.5.1",
     "gatsby-plugin-sharp": "^2.8.0",
+    "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-json": "^2.5.0",

@@ -7,3 +7,4 @@ sketch/
 .DS_Store
 yarn.lock
 .env
+src/.DS_Store

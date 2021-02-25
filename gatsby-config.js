@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,6 +53,7 @@ module.exports = {
     title: "i am jiu",
     description: "Front end developer passionate about visual and data",
     apiURL: process.env.C_API_URL,
+    siteUrl: process.env.C_URL,
     menuLinks: [
       {
         name: "Home",
