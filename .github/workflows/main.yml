@@ -11,3 +11,8 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
+        env:
+          GA_TRACKING_ID : ${{ secrets.GA_TRACKING_ID }}
+          C_API_URL : ${{ secrets.C_API_URL }}
+          C_API_URL_MAIL : ${{ secrets.C_API_URL_MAIL }}
+          C_URL : ${{ secrets.C_URL }}
