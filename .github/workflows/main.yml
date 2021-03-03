@@ -1,2 +1,14 @@
-- name: Github Action for Gatsby CLI
-  uses: jzweifel/gatsby-cli-github-action@v1.0.0
+on: push
+name: Build Gatsby Site in Subdirectory
+jobs:
+  build:
+    name: Build Gatsby Site
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build Gatsby Site
+      uses: jzweifel/gatsby-cli-github-action@master
+      env:
+        GATSBY_PROJECT_PATH: "./client"
+      with:
+        gatsby-arg: build
