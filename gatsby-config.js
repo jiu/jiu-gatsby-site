@@ -52,8 +52,8 @@ module.exports = {
   siteMetadata: {
     title: "i am jiu",
     description: "Front end developer passionate about visual and data",
-    apiURL: process.env.C_API_URL,
-    siteUrl: process.env.C_URL,
+    apiURL: ${{ secrets.C_API_URL }},
+    siteUrl: ${{ secrets.C_URL }},
     menuLinks: [
       {
         name: "Home",
