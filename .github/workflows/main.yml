@@ -8,14 +8,14 @@ jobs:
     steps:
       - run: echo "${{ secrets.C_URL }}"
       - run: echo "${{ secrets.env.C_URL }}"
-#       - uses: actions/checkout@v1
-#       - uses: enriikke/gatsby-gh-pages-action@v2
-#         with:
-#           access-token: ${{ secrets.ACCESS_TOKEN }}
-#           deploy-branch: gh-pages
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
         
-#         env:
-#           GA_TRACKING_ID : ${{ env.GA_TRACKING_ID }}
-#           C_API_URL : ${{ env.C_API_URL }}
-#           C_API_URL_MAIL : ${{ env.C_API_URL_MAIL }}
-#           C_URL : ${{ env.C_URL }}
+        env:
+          GA_TRACKING_ID : ${{ env.GA_TRACKING_ID }}
+          C_API_URL : ${{ env.C_API_URL }}
+          C_API_URL_MAIL : ${{ env.C_API_URL_MAIL }}
+          C_URL : ${{ secrets.C_URL }}
