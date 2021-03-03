@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ secrets.ACCESS_TOKEN }}"
+      - run: echo "${{ secrets.C_URL }}"
 #       - uses: actions/checkout@v1
 #       - uses: enriikke/gatsby-gh-pages-action@v2
 #         with:
