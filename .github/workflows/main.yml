@@ -6,13 +6,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-        env:
-          GA_TRACKING_ID : ${{ env.GA_TRACKING_ID }}
-          C_API_URL : ${{ env.C_API_URL }}
-          C_API_URL_MAIL : ${{ env.C_API_URL_MAIL }}
-          C_URL : ${{ env.C_URL }}
+      - run: echo "${{ env.C_URL }}"
+#       - uses: actions/checkout@v1
+#       - uses: enriikke/gatsby-gh-pages-action@v2
+#         with:
+#           access-token: ${{ secrets.ACCESS_TOKEN }}
+#           deploy-branch: gh-pages
+        
+#         env:
+#           GA_TRACKING_ID : ${{ env.GA_TRACKING_ID }}
+#           C_API_URL : ${{ env.C_API_URL }}
+#           C_API_URL_MAIL : ${{ env.C_API_URL_MAIL }}
+#           C_URL : ${{ env.C_URL }}
